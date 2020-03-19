@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_book_now"
+            android:icon="@drawable/ic_book_now"
+            android:title="@string/book_now" />
+        <item
+            android:id="@+id/nav_my_vehicle"
+            android:icon="@drawable/ic_my_vehicle"
+            android:title="@string/my_vehicle" />
+        <item
+            android:id="@+id/nav_add_vehicle"
+            android:icon="@drawable/ic_add_vehicle"
+            android:title="@string/add_vehicle" />
+        <item
+            android:id="@+id/nav_my_appointment"
+            android:icon="@drawable/ic_my_appointment"
+            android:title="@string/my_appointment" />
+
+        <item
+            android:id="@+id/nav_more_info"
+            android:icon="@drawable/ic_more_info"
+            android:title="@string/more_info" />
+
+    </group>
+
+    <item android:title="@string/other">
+        <menu>
+
+            <item
+                android:id="@+id/nav_payment"
+                android:icon="@drawable/ic_payment"
+                android:title="@string/payment" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout" />
+
+        </menu>
+    </item>
+
+</menu>

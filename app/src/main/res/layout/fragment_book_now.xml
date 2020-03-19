@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aara.tech.rootless_auto_user.ui.Fragments.BookNowFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login_inst"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_Year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/year"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/year_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_ChooseCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/choose_car"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/choose_car_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_select_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/select_your_model"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/select_model_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:visibility="gone"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_model_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:text="@string/select_car_first"
+                    android:textColor="@color/colorBlack"
+                    android:padding="12dp"
+                    android:textColorHint="@color/login_form_details"  />
+
+                <TextView
+                    android:id="@+id/tv_engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/enter_engine"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:hint="@string/enter_your_engine_type"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/login_form_details"
+                    android:textColorHint="@color/login_form_details" />
+
+                <TextView
+                    android:id="@+id/tv_zip_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/zip_code"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_zip_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:hint="@string/enter_your_zip_post_code"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/login_form_details"
+                    android:textColorHint="@color/login_form_details" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/gps_location"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_et_inst"
+                        android:hint="@string/latitude_longitude"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/login_form_details"
+                        android:textColorHint="@color/login_form_details"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/iv_picker"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:padding="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:src="@drawable/ic_picker"
+                        android:layout_weight="0"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_booking_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/booking_date"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_booking_date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et_inst"
+                    android:hint="@string/dd_mm_yyyy"
+                    android:padding="12dp"
+                    android:textColor="@color/login_form_details"
+                    android:textColorHint="@color/login_form_details" />
+
+                <TextView
+                    android:id="@+id/tv_select_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="8dp"
+                    android:text="@string/select_service"
+                    android:textColor="@color/login_form_details"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/ac_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/air_condition"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:id="@+id/tv_ac_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Price: 530"
+                            android:gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_weight="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/airbag_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/air_bag"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:id="@+id/tv_airbag_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Price: 540"
+                            android:gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_weight="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/battery_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/battery_problem"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/tv_battery_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Price: 550"
+                            android:gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_weight="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/break_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/break_pad"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/tv_break_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Price: 560"
+                            android:gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_weight="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/speed_meter_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/speed_meter"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:id="@+id/tv_speed_meter_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Price: 570"
+                            android:gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_weight="0"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_btn_inst"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/login_form_details_medium" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_home" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_Year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/year"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_gradient"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Spinner
+                        android:id="@+id/year_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/tv_ChooseCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/choose_car"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_gradient"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Spinner
+                        android:id="@+id/choose_car_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                         />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_select_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/select_your_model"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_gradient"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Spinner
+                        android:id="@+id/select_model_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                         />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/tv_choose_engine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/choose_engine"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <EditText
+                        android:id="@+id/et_choose_engine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_gradient"
+                        android:hint="@string/enter_your_engine_type"
+                        android:padding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_zip_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/zip_code"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/et_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_gradient"
+                        android:hint="@string/enter_your_zip_post_code"
+                        android:padding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_select_mechanic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/select_mechanic"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_gradient"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Spinner
+                        android:id="@+id/select_mechanic_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/our_services"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/battery_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_is_not_charging"
+                        android:layout_margin="4dp"/>
+
+                    <CheckBox
+                        android:id="@+id/break_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/anti_lock_breaking_system"
+                        android:layout_margin="4dp"/>
+
+                    <CheckBox
+                        android:id="@+id/ac_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/air_condition_not_working"
+                        android:layout_margin="4dp"/>
+
+                    <CheckBox
+                        android:id="@+id/airbag_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/air_bag"
+                        android:layout_margin="4dp"/>
+
+                    <CheckBox
+                        android:id="@+id/break_oil_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/break_oil"
+                        android:layout_margin="4dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="12dp">
+
+                    <Button
+                        android:id="@+id/btn_book_next"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/style_signup"
+                        android:text="@string/next"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>-->
+
+</FrameLayout>
